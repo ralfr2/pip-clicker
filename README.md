@@ -1,1 +1,2 @@
 Hello my name is Ralf and this is my project pip clicker. I coded this because the normal cookie clicker was too basic and it needed an upgrade. You can use it by clicking on pip and earning pips. With pips you can buy upgrades and unlock cool new things. I built almost all by myself and with a bit of help from my friend. Also I'm participating in the Terra HackClub Challenge to try and earn a Framework Laptop. :)
+<img width="1919" height="943" alt="grafik" src="https://github.com/user-attachments/assets/986b44c5-de55-45dc-86da-ad17ce91687f" />
