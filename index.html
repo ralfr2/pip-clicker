@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pip Clicker</h1>
+        <p>Welcome to Pip Clicker! Press the pip to start earning pips!</p>
+    </header>
+    <div class="game-container">
+        <button id="pip" onClick="clickPip()"><img src="pip.png" alt="Pip"</button>
+    </div>
+    <h2 id="pip-count">0</h2>
+    <script>
+        let pipCount = 0;
+
+        function clickPip() {
+            pipCount++;
+            document.getElementById('pip-count').innerText = pipCount;
+        }
+    </script>
+    <footer>
+        <p>&copy; 2026 Pip Clicker. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
