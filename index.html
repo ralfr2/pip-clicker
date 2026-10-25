@@ -7,24 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Pip Clicker</h1>
-        <p>Welcome to Pip Clicker! Press the pip to start earning pips!</p>
-    </header>
-    <div class="game-container">
-        <button id="pip" onClick="clickPip()"><img src="pip.png" alt="Pip"</button>
-    </div>
-    <h2 id="pip-count">0</h2>
-    <script>
-        let pipCount = 0;
 
-        function clickPip() {
-            pipCount++;
-            document.getElementById('pip-count').innerText = pipCount;
-        }
-    </script>
+    <header>
+        <h1 id="game-title">Pip Clicker</h1>
+        <p>Klicke auf Pip, um Pips zu verdienen und dein Imperium aufzubauen!</p>
+    </header>
+
+    <div class="game-layout">
+        <div class="clicker-section">
+            <div class="stats-box">
+                <div>Aktuelle Pips</div>
+                <div class="pip-counter" id="pip-count">0</div>
+                <div>Pro Sekunde: <span id="pps-count">0</span> | Pro Klick: <span id="ppc-count">1</span></div>
+            </div>
+
+            <button class="pip-btn" id="pip-button" onclick="clickPip(event)">
+                <img src="pip.png" alt="Pip" id="pip-img">
+            </button>
+
+            <div class="controls">
+                <button class="secondary-btn" onclick="saveGame()">Speichern</button>
+                <button class="secondary-btn" onclick="resetGame()">Neu starten</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="shop-section">
+            <h2 class="shop-title">Upgrades & Helfer</h2>
+
+            <div class="upgrade-card">
+                <div class="upgrade-info">
+                    <h4>Bessere Finger</h4>
+                    <p>+1 Pip pro Klick</p>
+                    <p>Level: <span id="lvl-clicker">0</span></p>
+                </div>
+                <button class="buy-btn" id="btn-clicker" onclick="buyClickUpgrade()">
+                    <span id="cost-clicker">15</span> Pips
+                </button>
+            </div>
+
+            <div class="upgrade-card">
+                <div class="upgrade-info">
+                    <h4>Pip-Bot</h4>
+                    <p>+1 Pip pro Sekunde</p>
+                    <p>Level: <span id="lvl-bot">0</span></p>
+                </div>
+                <button class="buy-btn" id="btn-bot" onclick="buyBot()">
+                    <span id="cost-bot">50</span> Pips
+                    </button>
+            </div>
+
+            <div class="upgrade-card">
+                <div class="upgrade-info">
+                    <h4>Pip-Fabrik</h4>
+                    <p>+10 Pips pro Sekunde</p>
+                    <p>Level: <span id="lvl-factory">0</span></p>
+                </div>
+                <button class="buy-btn" id="btn-factory" onclick="buyFactory()">
+                    <span id="cost-factory">300</span> Pips
+                </button>
+            </div>
+
+            <div class="upgrade-card">
+                <div class="upgrade-info">
+                    <h4>Quanten-Generator</h4>
+                    <p>+50 Pips pro Sekunde</p>
+                    <p>Level: <span id="lvl-quantum">0</span></p>
+                </div>
+                <button class="buy-btn" id="btn-quantum" onclick="buyQuantum()">
+                    <span id="cost-quantum">2000</span> Pips
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
     <footer>
-        <p>&copy; 2026 Pip Clicker. All Rights Reserved.</p>
+        <p>&copy; 2026 Pip Clicker | Alle Rechte vorbehalten</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
